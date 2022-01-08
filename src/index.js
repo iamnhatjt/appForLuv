@@ -13,7 +13,13 @@ app.use("/", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-  // ...
+  socket.on("new user", (id) => {
+    io.emit("new user", id);
+  });
+
+  socket.on("message", (message) => {
+    socket.broadcast.emit("message", message);
+  });
 });
 
 httpServer.listen(3000);

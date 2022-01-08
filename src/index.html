@@ -106,7 +106,7 @@
         display: table;
         padding: 10px 30px;
         font-size: 18px;
-        font-family: cursive;
+        /* font-family: cursive; */
       }
       .message {
         background-image: linear-gradient(to right, #5e5e40, #172267);
@@ -117,7 +117,7 @@
         display: table;
         padding: 10px 30px;
         font-size: 18px;
-        font-family: cursive;
+        /* font-family: cursive; */
       }
 
       @media screen and (max-width: 768px) {
@@ -231,7 +231,6 @@
     var peer = new Peer();
     var idGolobal;
     peer.on("open", (id1) => {
-      id1 = socket.id;
       console.log("id peer:", id1);
     });
 

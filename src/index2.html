@@ -154,13 +154,13 @@
   </body>
   <script>
     var peer = new Peer();
-    peer.on("open", (id) => {
-      console.log(id);
+    peer.on("open", function (id) {
+      console.log("My peer ID is: " + id);
     });
 
     // openvideo on devices
     function openStrem() {
-      const config = { audio: true, video: true };
+      const config = { audio: false, video: true };
       return navigator.mediaDevices.getUserMedia(config);
     }
 

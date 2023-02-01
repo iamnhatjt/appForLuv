@@ -229,7 +229,6 @@
       socket.emit("new user", socket.id);
     });
     var peer = new Peer();
-    var idGolobal;
     peer.on("open", (id1) => {
       console.log("id peer:", id1);
     });
